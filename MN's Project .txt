@@ -1,0 +1,84 @@
+// In this project we find user age in Days , minutes and in hours .
+
+void main() {
+  print("In this project we find user age  \nin Days , minutes and in hours .");
+Design d= Design();
+  d.welcome();
+  d.body();
+
+  d.material();
+  d.body();
+  d.end();
+  
+  
+}
+
+
+
+//calculator class
+class AgeCalculator {
+  
+  List<int> currentDate=[17,1,2024];
+  List<int> birthDate=[18,08,1999];
+  
+  int ageInDays(){
+    
+    int days= (currentDate[2] - birthDate[2])*360 + (currentDate[1] - birthDate[1])*30 + (currentDate[0] - birthDate[0]) ;
+    return days;
+  }
+  
+  int ageInHours(){
+    
+    int hours =ageInDays()*24;
+    return hours;
+  }
+  
+  int ageInMinutes(){
+    
+    int minutes =ageInHours()*60;
+    return minutes;
+  }
+  
+}
+//end calculator class
+
+
+//Design class
+class Design  extends AgeCalculator {
+  
+  design1(){
+    print(ageInDays());
+  }
+  
+  welcome(){
+    print("=========================================");
+    print("        WELCOME TO AGE CALCULATOR        ");
+    print("=========================================");
+  }
+  
+  body(){
+    for(int i=0 ; i<=2 ; i++){
+    print("=                                       =");
+    }
+    
+  }
+  
+  material(){
+    print("=      YOUR AGE IN DAYS : ${ageInDays()}          =");
+    print("=      YOUR AGE IN HOURS : ${ageInHours()}       =");
+    print("=      YOUR AGE IN MINUTES : ${ageInMinutes()}   =");
+    
+  }
+  
+  end(){
+    print("=========================================");
+    print("                   END                   ");
+    print("=========================================");
+  }
+  
+  
+  
+  
+  
+}
+//end Design class
